@@ -1,0 +1,15 @@
+# Media & Demo Recordings
+*.mp4
+*.mov
+*.avi
+
+# Python & Automation scripts
+__pycache__/
+*.pyc
+*.pyo
+record_herbal_walkthrough.py
+
+# Environment & System
+.env
+.DS_Store
+Thumbs.db

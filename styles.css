@@ -1,0 +1,2571 @@
+/* ==========================================================================
+   TIBICO FERMENTARY / JS HERBAL INDUSTRY — TOKEN-DRIVEN DESIGN SYSTEM & CSS
+   Visual Style: Minimal, Utility-First, Accessibility-Prioritized (WCAG 2.2 AA)
+   ========================================================================== */
+
+:root {
+  /* --- Core Typography Tokens (Prompt Specification) --- */
+  --font-family-primary: "neulis-neue", "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-stack: "neulis-neue", "Jost", "Josefin Sans", sans-serif;
+  --font-family-heading: "neulis-neue", "Josefin Sans", "Jost", sans-serif;
+  --font-family-display: "Archivo Black", "neulis-neue", sans-serif;
+
+  --font-size-xs: 11.34px;
+  --font-size-sm: 11.7px;
+  --font-size-md: 12px;
+  --font-size-lg: 12.96px;
+  --font-size-xl: 13.33px;
+  --font-size-2xl: 14px;
+  --font-size-3xl: 14.4px;
+  --font-size-4xl: 14.58px;
+  --font-size-base: 16.2px;
+  --font-weight-base: 400;
+  --font-lineHeight-base: 30.6px;
+
+  /* --- Extended Display Typography (Tibico Storefront Scale) --- */
+  --font-size-subtitle: 20px;
+  --font-size-card-price: 20.736px;
+  --font-size-card-price-soft: 24.88px;
+  --font-size-h3: 22px;
+  --font-size-h2: 36px;
+  --font-size-h1: 41.692px;
+  --font-size-bestsellers-h2: 43px;
+
+  /* --- Core Semantic Color Tokens (Prompt Specification) --- */
+  --color-text-primary: #1d1d1d;
+  --color-surface-base: #000000;
+  --color-text-tertiary: #ffffff;
+  --color-surface-raised: #f2f2f2;
+
+  /* --- Extended Tibico Botanical Storefront Palette --- */
+  --color-surface-ground: #ffffff;
+  --color-surface-lavender: #f1e5f4;
+  --color-surface-lavender-alt: #efe6f3;
+  --color-surface-lime: #dde9ae;
+  --color-surface-lime-hero: #dee9af;
+  --color-surface-amber-hero: #e9ccaf;
+  --color-surface-cream: #f7f6ef;
+  --color-text-muted: #616161;
+  --color-text-lime-ink: #416e2f;
+  --color-border-subtle: #d1d1d1;
+  --color-border-card: #edf1f0;
+  --color-border-lavender: #e2cde8;
+  --color-border-featured: #8b7a99;
+  --color-border-lime: #648f52;
+  --color-scroll-indicator: #d4c4d9;
+  --color-status-error: #b3261e;
+  --color-status-error-bg: #fceeee;
+  --color-status-success: #2e6b22;
+
+  /* --- Spacing Scale Tokens (Prompt Specification) --- */
+  --space-1: 1px;
+  --space-2: 3.6px;
+  --space-3: 4px;
+  --space-4: 4.5px;
+  --space-5: 5px;
+  --space-6: 6px;
+  --space-7: 6.3px;
+  --space-8: 6.75px;
+
+  /* --- Layout & Section Rhythm --- */
+  --page-width: 1920px;
+  --container-narrow: 1140px;
+  --container-faq: 990px;
+  --section-pad-x-mobile: 1.5rem;
+  --section-pad-x-desktop: 5rem;
+
+  /* --- Radius Tokens (Prompt Specification) --- */
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-btn: 9px;
+  --radius-panel: 14px;
+  --radius-md: 15px;
+  --radius-lg: 18px;
+  --radius-xl: 20px;
+  --radius-2xl: 50px;
+  --radius-step7: 999px;
+
+  /* --- Shadow Tokens (Prompt Specification) --- */
+  --shadow-1: rgb(0, 0, 0) 0px 4px 14px -10px;
+  --shadow-2: rgba(140, 80, 165, 0.55) 0px 0px 15.9961px 3.99902px;
+  --shadow-2-subtle: rgba(140, 80, 165, 0.18) 0px 0px 5.28886px 1.32221px;
+  --shadow-3: rgba(0, 0, 0, 0.18) 0px 2px 10px 0px;
+  --shadow-card: 0 1px 2px rgba(29, 29, 29, 0.05), 0 8px 24px rgba(29, 29, 29, 0.05);
+
+  /* --- Motion Tokens (Prompt Specification) --- */
+  --motion-duration-instant: 100ms;
+  --motion-duration-fast: 150ms;
+  --motion-duration-normal: 200ms;
+  --motion-duration-slow: 300ms;
+  --motion-duration-slower: 400ms;
+  --motion-duration-step6: 700ms;
+  --motion-ease-standard: cubic-bezier(0.25, 0.8, 0.25, 1);
+  --motion-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   1. RESET, BASE & ACCESSIBILITY FOUNDATIONS
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px; /* Matches Tibico 62.5% base scale */
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base);
+  line-height: var(--font-lineHeight-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-ground);
+  letter-spacing: 0.04rem;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: opacity var(--motion-duration-slow) ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  margin-top: 0;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+  text-wrap: balance;
+}
+
+p {
+  color: var(--color-text-primary);
+  margin-top: 0;
+}
+
+img, video, svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Keyboard-First Focus-Visible Rules (WCAG 2.2 AA Required) */
+:focus-visible {
+  outline: 3px solid var(--color-surface-base) !important;
+  outline-offset: 3px !important;
+  box-shadow: var(--shadow-2) !important;
+}
+
+/* Skip to Content Link */
+.skip-to-content-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 9999;
+  background: var(--color-surface-base);
+  color: var(--color-text-tertiary);
+  padding: 12px 24px;
+  border-radius: var(--radius-btn);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  text-decoration: none;
+  transition: top var(--motion-duration-normal) ease;
+}
+
+.skip-to-content-link:focus,
+.skip-to-content-link:focus-visible {
+  top: 16px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  word-wrap: normal !important;
+}
+
+/* Color Schemes (Exact Tibico .color-option-1 to .color-option-4) */
+.color-option-1 {
+  background-color: var(--color-surface-ground);
+  color: var(--color-text-primary);
+}
+
+.color-option-2 {
+  background-color: var(--color-surface-lavender);
+  color: var(--color-text-primary);
+}
+
+.color-option-3 {
+  background-color: var(--color-text-primary);
+  color: var(--color-text-tertiary);
+}
+
+.color-option-4 {
+  background-color: var(--color-surface-lime);
+  color: var(--color-surface-base);
+}
+
+.page-width {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding-left: var(--section-pad-x-mobile);
+  padding-right: var(--section-pad-x-mobile);
+}
+
+@media screen and (min-width: 990px) {
+  .page-width {
+    padding-left: var(--section-pad-x-desktop);
+    padding-right: var(--section-pad-x-desktop);
+  }
+}
+
+/* ==========================================================================
+   2. PAGE LOADER & TOP SCROLL PROGRESS INDICATOR (Exact Tibico Animations)
+   ========================================================================== */
+.page-loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  background: var(--color-surface-raised);
+  z-index: 2000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--motion-duration-slower) ease, visibility var(--motion-duration-slower) ease;
+}
+
+.page-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.page-loader-text {
+  color: var(--color-text-muted);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  font-family: var(--font-family-heading);
+  opacity: 0;
+  animation: textFadeSlide 1.2s ease-out 0.1s forwards;
+}
+
+.load-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--space-3);
+}
+
+.load-spinner::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-scroll-indicator);
+  animation: fill 2s infinite;
+}
+
+@keyframes fill {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes textFadeSlide {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Top Scroll Progress Indicator */
+.line {
+  height: var(--space-1);
+  min-height: 3px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  pointer-events: none;
+}
+
+.line .progress {
+  height: 100%;
+  width: 0%;
+  background: var(--color-scroll-indicator);
+  transition: width var(--motion-duration-normal) ease;
+}
+
+/* ==========================================================================
+   3. BUTTONS & INTERACTIVE STATES (Default, Hover, Focus, Active, Disabled, Loading, Error)
+   ========================================================================== */
+.button {
+  font-family: var(--font-family-primary);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 1.4rem 3.4rem;
+  min-height: 45px;
+  border-radius: var(--radius-btn);
+  border: 2px solid var(--color-surface-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--motion-duration-slow) ease,
+              color var(--motion-duration-slow) ease,
+              border-color var(--motion-duration-slow) ease,
+              transform var(--motion-duration-fast) ease,
+              box-shadow var(--motion-duration-normal) ease,
+              opacity var(--motion-duration-normal) ease;
+  position: relative;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Primary Variant */
+.button--primary,
+.button-arrow.button {
+  background-color: var(--color-surface-base);
+  color: var(--color-text-tertiary) !important;
+  border-color: var(--color-surface-base);
+}
+
+.button--primary:hover,
+.button-arrow.button:hover {
+  background-color: var(--color-surface-ground);
+  color: var(--color-surface-base) !important;
+  border-color: var(--color-surface-base);
+  box-shadow: var(--shadow-1);
+}
+
+/* Secondary Variant */
+.button--secondary {
+  background-color: var(--color-surface-ground);
+  color: var(--color-surface-base) !important;
+  border: 2px solid var(--color-surface-base);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-surface-base);
+  color: var(--color-text-tertiary) !important;
+  border-color: var(--color-surface-base);
+}
+
+/* Active State */
+.button:active:not(:disabled):not([aria-disabled="true"]) {
+  transform: scale(0.98);
+}
+
+/* Disabled State */
+.button:disabled,
+.button[aria-disabled="true"],
+.button.is-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Loading State */
+.button.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.button.is-loading::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-text-tertiary);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: btnSpin var(--motion-duration-step6) linear infinite;
+}
+
+/* Error State */
+.button.is-error {
+  background-color: var(--color-status-error) !important;
+  border-color: var(--color-status-error) !important;
+  color: var(--color-text-tertiary) !important;
+}
+
+@keyframes btnSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Button Arrow Circle Icon (Exact Tibico .button-arrow) */
+.button-arrow .icon-arrow-circle {
+  width: 20px;
+  height: 20px;
+  background: rgba(159, 159, 159, 0.4);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: var(--space-5);
+  transition: transform var(--motion-duration-normal) ease, background-color var(--motion-duration-normal) ease;
+}
+
+.button-arrow:hover .icon-arrow-circle {
+  transform: translateX(4px);
+  background: rgba(29, 29, 29, 0.15);
+}
+
+/* ==========================================================================
+   4. SCROLLING MARQUEE SECTIONS (Top Bar, Mid-Page & Image Gallery)
+   ========================================================================== */
+.scroll-text {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  user-select: none;
+}
+
+.scroll-text--top {
+  height: 40px;
+  font-size: var(--font-size-2xl);
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.scroll-text--mid {
+  height: 75px;
+  font-size: 26px;
+  font-family: var(--font-family-heading);
+  font-weight: 800;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(29, 29, 29, 0.08);
+  border-bottom: 1px solid rgba(29, 29, 29, 0.08);
+}
+
+.scroll-text-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marqueeScroll 38s linear infinite;
+}
+
+.scroll-text:hover .scroll-text-track,
+.scroll-text:focus-within .scroll-text-track {
+  animation-play-state: paused;
+}
+
+.scroll-text-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 4.5rem;
+  gap: 4.5rem;
+}
+
+.scroll-text-item p {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.scroll-circle-decoration {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  animation: slowRotate 12s linear infinite;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes slowRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   5. STICKY HEADER & MEGA NAVIGATION (Exact Tibico Header)
+   ========================================================================== */
+.section-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(209, 209, 209, 0.55);
+  transition: box-shadow var(--motion-duration-normal) ease, transform var(--motion-duration-slow) ease;
+}
+
+.section-header.is-scrolled {
+  box-shadow: var(--shadow-1);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2.4rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 76px;
+}
+
+.header__heading {
+  margin: 0;
+  line-height: 1;
+}
+
+.header__heading-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
+.header__logo-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-surface-base);
+  color: var(--color-surface-lime);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+}
+
+.header__logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo-brand {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+  color: var(--color-surface-base);
+}
+
+.header__logo-sub {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+/* Main Navigation */
+.main-navigation-mega {
+  justify-self: center;
+}
+
+.navigation-menu {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4px;
+}
+
+.navigation-menu > li {
+  position: relative;
+  padding: 0 10px;
+}
+
+.nav-menu-item {
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+  font-size: var(--font-size-2xl);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  padding: 8px 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  transition: color var(--motion-duration-fast) ease;
+}
+
+.nav-menu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-surface-base);
+  transition: width var(--motion-duration-normal) ease;
+}
+
+.nav-menu-item:hover::after,
+.nav-menu-item[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* Tibico HOT Badge on Nav Item */
+.nav-badge-hot {
+  background: var(--color-surface-lime);
+  color: var(--color-text-primary);
+  padding: 1px 5px;
+  border-radius: var(--radius-xs);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.3;
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  letter-spacing: 0.04em;
+}
+
+/* Header Utility Icons */
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--color-text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: background-color var(--motion-duration-fast) ease, transform var(--motion-duration-fast) ease;
+  text-decoration: none;
+}
+
+.header__icon-btn:hover {
+  background-color: var(--color-surface-raised);
+  transform: translateY(-1px);
+}
+
+.cart-count-bubble {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background: var(--color-surface-base);
+  color: var(--color-text-tertiary);
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: var(--radius-step7);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .main-navigation-mega {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+  .header {
+    grid-template-columns: auto 1fr auto;
+  }
+  .header__heading {
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    gap: 0.8rem;
+    min-height: 64px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .header__logo-mark {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+  .header__logo-brand {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  .header__logo-sub {
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .header__icons {
+    gap: 2px;
+  }
+  .header__icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* ==========================================================================
+   6. TOP ANNOUNCEMENT / CROWDCUBE-STYLE DUAL BANNER (.tcc-banner)
+   ========================================================================== */
+.tcc-banner {
+  background: var(--color-surface-ground);
+  font-family: var(--font-family-primary);
+  color: var(--color-surface-base);
+}
+
+.tcc-risk {
+  margin: 0;
+  background: var(--color-surface-base);
+  color: var(--color-text-tertiary);
+  padding: 8px 16px;
+  font-size: var(--font-size-2xl);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.tcc-risk a {
+  color: var(--color-surface-lime);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.tcc-band {
+  background: var(--color-surface-lime);
+  color: var(--color-text-primary);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  text-align: center;
+}
+
+.tcc-label {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.tcc-btn {
+  background: var(--color-surface-base);
+  color: var(--color-text-tertiary);
+  padding: 5px 16px;
+  border-radius: var(--radius-step7);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: opacity var(--motion-duration-fast) ease, transform var(--motion-duration-fast) ease;
+}
+
+.tcc-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   7. HERO SLIDER SECTION (Exact Tibico .hero-slider Split Architecture)
+   ========================================================================== */
+.hero-slider-wrapper {
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  background: var(--color-surface-ground);
+  position: relative;
+}
+
+.hero-slider__viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero-slider__cell {
+  width: 100%;
+  display: none;
+  animation: fadeSlideIn var(--motion-duration-step6) var(--motion-ease-out) forwards;
+}
+
+.hero-slider__cell.is-selected {
+  display: block;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0.2;
+    transform: scale(0.995);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-slider__item {
+  display: flex;
+  min-height: 550px;
+  overflow: hidden;
+}
+
+.hero-slider__content {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 3.8rem 4.2rem;
+  position: relative;
+  transition: background-color var(--motion-duration-slower) ease;
+}
+
+.hero-slider__content-inner {
+  max-width: 46rem;
+  text-align: center;
+}
+
+.hero-slider__eyebrow {
+  display: inline-block;
+  background: rgba(29, 29, 29, 0.08);
+  color: var(--color-text-primary);
+  padding: 4px 14px;
+  border-radius: var(--radius-step7);
+  font-size: var(--font-size-md);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.hero-slider__heading {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  text-align: center;
+  font-size: clamp(24px, 2.2vw + 4px, 32px);
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.hero-slider__text {
+  margin-bottom: 1.4rem;
+  font-size: clamp(13px, 0.3vw + 10.5px, 14.2px);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.hero-slider__text p {
+  margin-bottom: 0.65rem;
+}
+
+.hero-slider__text p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-slider__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.hero-slider__media {
+  width: 60%;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface-raised);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slider__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 8s ease-out;
+}
+
+.hero-slider__cell.is-selected .hero-slider__media img {
+  transform: scale(1.04);
+}
+
+/* Floating Seal Badge on Hero Media (Exact Tibico .hero-slider__media-badge) */
+.hero-slider__media-badge {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  width: 148px;
+  height: 148px;
+  z-index: 2;
+  animation: slowRotate 24s linear infinite;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.18));
+}
+
+.hero-slider__media-overlay-card {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 16px 22px;
+  border-radius: var(--radius-lg);
+  max-width: 340px;
+  box-shadow: var(--shadow-3);
+}
+
+.hero-slider__media-overlay-card strong {
+  display: block;
+  font-size: var(--font-size-2xl);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.hero-slider__media-overlay-card span {
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  display: block;
+}
+
+/* Hero Slider Controls & Dots */
+.hero-slider__controls {
+  position: absolute;
+  bottom: 20px;
+  left: 19%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+}
+
+.hero-slider__dots {
+  display: flex;
+  gap: 8px;
+}
+
+.hero-slider__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-step7);
+  border: none;
+  background: rgba(29, 29, 29, 0.25);
+  cursor: pointer;
+  padding: 0;
+  transition: width var(--motion-duration-normal) ease, background-color var(--motion-duration-normal) ease;
+}
+
+.hero-slider__dot[aria-selected="true"] {
+  width: 28px;
+  background: var(--color-surface-base);
+}
+
+.hero-slider__arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(29, 29, 29, 0.25);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color var(--motion-duration-fast) ease, color var(--motion-duration-fast) ease;
+}
+
+.hero-slider__arrow:hover {
+  background: var(--color-surface-base);
+  color: var(--color-text-tertiary);
+}
+
+/* Hero Trust Bar (.hero-slider__trust-bar) */
+.hero-slider__trust-bar {
+  min-height: 68px;
+  background-color: var(--color-surface-cream);
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+}
+
+.trust-bar__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.trust-bar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.trust-bar__stars {
+  color: #00b67a;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1040px) {
+  .tcc-risk {
+    padding: 5px 12px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  .tcc-band {
+    padding: 6px 12px;
+    gap: 8px;
+  }
+  .tcc-label {
+    font-size: 12.5px;
+    line-height: 1.35;
+  }
+  .hero-slider__item {
+    flex-direction: column-reverse;
+    min-height: auto;
+  }
+  .hero-slider__content,
+  .hero-slider__media {
+    width: 100%;
+  }
+  .hero-slider__media {
+    height: 310px;
+  }
+  .hero-slider__media-badge {
+    top: 14px;
+    right: 14px;
+    bottom: auto;
+    width: 92px;
+    height: 92px;
+  }
+  .hero-slider__media-overlay-card {
+    bottom: 14px;
+    left: 14px;
+    padding: 9px 13px;
+    max-width: 250px;
+  }
+  .hero-slider__content {
+    padding: 1.8rem 2.2rem 4.2rem;
+  }
+  .hero-slider__eyebrow {
+    margin-bottom: 0.6rem;
+  }
+  .hero-slider__heading {
+    margin-bottom: 0.65rem;
+    font-size: 26px;
+  }
+  .hero-slider__text {
+    margin-bottom: 1.15rem;
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+  .hero-slider__text p {
+    margin-bottom: 0.5rem;
+  }
+  .hero-slider__controls {
+    left: 50%;
+    bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tcc-risk {
+    font-size: 10.5px;
+    padding: 4px 10px;
+    line-height: 1.3;
+  }
+  .tcc-band {
+    padding: 5px 10px;
+    gap: 6px;
+  }
+  .tcc-label {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+  .tcc-btn {
+    padding: 3px 11px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+  .hero-slider__media {
+    height: 176px;
+  }
+  .hero-slider__media-badge {
+    top: 8px;
+    right: 8px;
+    width: 60px;
+    height: 60px;
+  }
+  .hero-slider__media-overlay-card {
+    display: none;
+  }
+  .hero-slider__content {
+    padding: 0.9rem 1.2rem 2.8rem;
+  }
+  .hero-slider__eyebrow {
+    font-size: 9.5px;
+    padding: 2px 9px;
+    margin-bottom: 0.35rem;
+  }
+  .hero-slider__heading {
+    font-size: 18px;
+    margin-bottom: 0.4rem;
+  }
+  .hero-slider__text {
+    font-size: 11.4px;
+    line-height: 1.34;
+    margin-bottom: 0.65rem;
+  }
+  .hero-slider__text p {
+    margin-bottom: 0.3rem;
+  }
+  .hero-slider__buttons {
+    gap: 6px;
+  }
+  .hero-slider__buttons .button {
+    padding: 0.55rem 1.3rem;
+    font-size: 11.5px;
+    min-height: 35px;
+  }
+  .hero-slider__controls {
+    bottom: 6px;
+  }
+}
+
+/* ==========================================================================
+   8. HAMARI PRODUCTS — TIBICO .tbc-bs.is-soft PRODUCT CARDS
+   ========================================================================== */
+.tbc-bs {
+  background: var(--color-surface-ground);
+  padding: 56px var(--section-pad-x-mobile);
+}
+
+@media screen and (min-width: 990px) {
+  .tbc-bs {
+    padding: 68px var(--section-pad-x-desktop);
+  }
+}
+
+.tbc-wrap {
+  max-width: var(--page-width);
+  margin-inline: auto;
+}
+
+.tbc-head {
+  margin: 0 auto 36px;
+  text-align: center;
+  max-width: 820px;
+}
+
+.tbc-eyebrow {
+  display: inline-block;
+  background: var(--color-surface-lime);
+  color: var(--color-text-primary);
+  padding: 4px 14px;
+  border-radius: var(--radius-step7);
+  font-size: var(--font-size-md);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.tbc-head h2 {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+
+@media screen and (min-width: 750px) {
+  .tbc-head h2 {
+    font-size: var(--font-size-bestsellers-h2);
+  }
+}
+
+.tbc-head p {
+  font-size: var(--font-size-base);
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.tbc-grid {
+  display: grid;
+  gap: 24px;
+  align-items: stretch;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tbc-card {
+  font-family: var(--font-family-primary);
+  background: var(--color-surface-raised);
+  border: 0;
+  border-radius: var(--radius-xl);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: transform var(--motion-duration-slow) ease, box-shadow var(--motion-duration-slow) ease;
+  position: relative;
+}
+
+.tbc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.tbc-card.is-featured {
+  outline: 2px solid var(--color-border-featured);
+  outline-offset: 2px;
+}
+
+.tbc-band {
+  text-align: center;
+  padding: 4px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 54px;
+}
+
+.tbc-band .tbc-name {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.tbc-band .tbc-size {
+  font-size: var(--font-size-card-price);
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+.tbc-media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--color-surface-ground);
+  border-radius: var(--radius-panel);
+  margin: 10px 0 14px;
+}
+
+.tbc-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--motion-duration-slower) ease;
+}
+
+.tbc-card:hover .tbc-media img {
+  transform: scale(1.05);
+}
+
+.tbc-best {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  background: var(--color-text-primary);
+  color: var(--color-text-tertiary);
+  border-radius: var(--radius-step7);
+  padding: 4px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tbc-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  flex: 1;
+}
+
+.tbc-panel {
+  width: 100%;
+  background: var(--color-surface-ground);
+  border-radius: var(--radius-panel);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.tbc-panel .tbc-lbl {
+  order: -1;
+  background: var(--color-surface-lime);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-step7);
+  padding: 4px 12px;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+}
+
+.tbc-panel .tbc-desc {
+  font-size: var(--font-size-2xl);
+  line-height: 1.55;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.tbc-panel .tbc-or {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-surface-raised);
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+.tbc-ship {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-text-lime-ink);
+}
+
+.tbc-btn {
+  width: 100%;
+  margin-top: auto;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 2px solid var(--color-text-primary);
+  border-radius: var(--radius-step7);
+  background: var(--color-text-primary);
+  color: var(--color-text-tertiary);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--motion-duration-normal) ease, color var(--motion-duration-normal) ease;
+}
+
+.tbc-btn:hover {
+  background: var(--color-surface-ground);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 1100px) {
+  .tbc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tbc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   9. SPOTLIGHT SECTION (HAMARI KHUSUSIYAT — 3-Column "Anatomy of a Bottle" Layout)
+   ========================================================================== */
+.spotlight {
+  width: 100%;
+  padding: 64px 0;
+  background: var(--color-surface-ground);
+}
+
+.spotlight__header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.spotlight__title {
+  margin-bottom: 0.8rem;
+  font-weight: 900;
+  font-size: clamp(28px, 3vw, 41.69px);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.1;
+}
+
+.spotlight__columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.spotlight__col--side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.spotlight__col--center {
+  flex: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotlight__image {
+  width: 100%;
+  max-width: 390px;
+  position: relative;
+}
+
+.spotlight__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-3);
+}
+
+.spotlight__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  transition: background-color var(--motion-duration-normal) ease, transform var(--motion-duration-normal) ease;
+}
+
+.spotlight__feature:hover {
+  background-color: var(--color-surface-raised);
+  transform: translateY(-2px);
+}
+
+.spotlight__icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--color-surface-lavender);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: background-color var(--motion-duration-normal) ease, transform var(--motion-duration-normal) ease;
+}
+
+.spotlight__feature:hover .spotlight__icon {
+  background: var(--color-surface-lime);
+  transform: scale(1.08);
+}
+
+.spotlight__feature-title {
+  margin: 6px 0 8px;
+  font-weight: 900;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.spotlight__feature-text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Spotlight Bottom 5-Pillar Strip */
+.spotlight__bottom {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(209, 209, 209, 0.5);
+}
+
+.spotlight__bottom-track {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.spotlight__bottom-item {
+  flex: 1;
+  min-width: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.spotlight__bottom-item .spotlight__icon {
+  width: 62px;
+  height: 62px;
+  background: var(--color-surface-lime);
+}
+
+.spotlight__bottom-title {
+  margin: 8px 0 4px;
+  font-weight: 900;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.spotlight__bottom-text {
+  font-size: var(--font-size-2xl);
+  line-height: 22px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+@media screen and (max-width: 1040px) {
+  .spotlight__columns {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .spotlight__col--center {
+    order: -1;
+  }
+  .spotlight__col--side {
+    gap: 24px;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   10. RICH TEXT & ANIMATED HAND-DRAWN UNDERLINE (Mission & Vision Section)
+   ========================================================================== */
+.rich-text-section {
+  padding: 64px 0;
+}
+
+.rich-text-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.animated-highlight {
+  font-size: clamp(26px, 2.8vw, 38px);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+  position: relative;
+  display: inline-block;
+}
+
+.animated-highlight em {
+  font-style: normal;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.animated-highlight em::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleX(-1);
+  bottom: -10px;
+  width: 0%;
+  height: 14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='167' height='10' viewBox='0 0 167 10'%3E%3Cpath d='M5 8C40 4 130 -1 162 6' stroke='%231d1d1d' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  opacity: 0;
+  z-index: -1;
+  transition: width 0.6s ease 0.3s, opacity 0.4s ease 0.3s;
+}
+
+.aos-animate .animated-highlight em::after,
+.animated-highlight:hover em::after {
+  width: 105%;
+  opacity: 1;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+  text-align: left;
+}
+
+.mv-card {
+  background: var(--color-surface-ground);
+  border: 1px solid var(--color-border-lavender);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mv-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  background: var(--color-surface-lime);
+  color: var(--color-text-primary);
+  padding: 4px 12px;
+  border-radius: var(--radius-xs);
+  font-size: var(--font-size-md);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.mv-card h3 {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.mv-card p {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media screen and (max-width: 990px) {
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   11. CUSTOM IMAGE WITH TEXT (55% Media / 45% Text Split — Exact Tibico)
+   ========================================================================== */
+.custom-image-with-text-section {
+  padding: 44px 0;
+}
+
+.image-with-text-grid {
+  display: flex;
+  align-items: center;
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.image-with-text-grid--reverse {
+  flex-direction: row-reverse;
+}
+
+.image-with-text-media-item {
+  flex: 0 0 55%;
+  width: 55%;
+  max-width: 55%;
+}
+
+.image-with-text-media {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 11 / 10;
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-1);
+}
+
+.image-with-text-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--motion-duration-step6) ease;
+}
+
+.image-with-text-media:hover img {
+  transform: scale(1.03);
+}
+
+.image-with-text-text-item {
+  flex: 0 0 45%;
+  width: 45%;
+  max-width: 45%;
+  padding: 0 0 0 4.5rem;
+}
+
+.image-with-text-grid--reverse .image-with-text-text-item {
+  padding: 0 4.5rem 0 0;
+}
+
+.image-with-text-text--subtitle {
+  color: var(--color-surface-base);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-subtitle);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: inline-block;
+  background: var(--color-surface-lime);
+  padding: 5px 14px;
+  border-radius: var(--radius-xs);
+}
+
+.image-with-text-heading {
+  color: var(--color-surface-base);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h2);
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.image-with-text-text.rte p {
+  font-size: 15.5px;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.1em;
+  color: var(--color-surface-base);
+}
+
+.image-with-text-text.rte ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0 24px;
+}
+
+.image-with-text-text.rte ul li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--color-surface-base);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-2xl);
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.image-with-text-text.rte ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-surface-base);
+  font-weight: 900;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 989px) {
+  .image-with-text-grid,
+  .image-with-text-grid--reverse {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .image-with-text-media-item,
+  .image-with-text-text-item,
+  .image-with-text-grid--reverse .image-with-text-text-item {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .image-with-text-heading {
+    font-size: 26px;
+  }
+}
+
+/* ==========================================================================
+   12. TIBICO CORE VALUES SECTION (Lavender #efe6f3 4-Column Grid)
+   ========================================================================== */
+.tibico-core-values {
+  width: 100%;
+  background: var(--color-surface-lavender-alt);
+  padding: 56px 0;
+}
+
+.tibico-core-values__inner {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+}
+
+.tibico-core-values__title {
+  color: var(--color-surface-base);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h1);
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.tibico-core-values__content {
+  margin-top: 1.2rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.tibico-core-values__items {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.8rem;
+  margin-top: 36px;
+}
+
+.tibico-core-values__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 24px 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(140, 80, 165, 0.14);
+  transition: transform var(--motion-duration-normal) ease, background-color var(--motion-duration-normal) ease;
+}
+
+.tibico-core-values__item:hover {
+  transform: translateY(-4px);
+  background: var(--color-surface-ground);
+}
+
+.tibico-core-values__item-icon {
+  width: 63px;
+  height: 63px;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-lime);
+  border-radius: 50%;
+  color: var(--color-surface-base);
+}
+
+.tibico-core-values__item-title {
+  margin: 0 0 0.6rem;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.tibico-core-values__item-text {
+  font-size: var(--font-size-2xl);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.tibico-core-values__button-wrap {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 989px) {
+  .tibico-core-values__items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .tibico-core-values__items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   13. IMAGE GALLERY HORIZONTAL SCROLL REEL (.image-gallery-section)
+   ========================================================================== */
+.image-gallery-section {
+  --image-gallery-scroll-height: 305px;
+  padding: 24px 0 50px;
+  overflow: hidden;
+}
+
+.image-gallery-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: galleryScroll 45s linear infinite;
+}
+
+.image-gallery-section:hover .image-gallery-track {
+  animation-play-state: paused;
+}
+
+.image-gallery-card {
+  height: var(--image-gallery-scroll-height);
+  width: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.image-gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--motion-duration-slower) ease;
+}
+
+.image-gallery-card:hover img {
+  transform: scale(1.06);
+}
+
+.image-gallery-card__caption {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  background: rgba(29, 29, 29, 0.84);
+  backdrop-filter: blur(6px);
+  color: var(--color-text-tertiary);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@keyframes galleryScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   14. WHATSAPP ORDERING & GUARANTEE CALLOUT (.tibg--lp & Two-Images-Text)
+   ========================================================================== */
+.whatsapp-order-section {
+  padding: 56px 0;
+}
+
+.whatsapp-order-grid {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.tibg--lp {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 32px;
+  background: var(--color-surface-lavender);
+  border: 1px solid var(--color-border-lavender);
+  border-radius: var(--radius-lg);
+  margin-top: 24px;
+}
+
+.tibg__badge {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--color-surface-base);
+  color: var(--color-surface-lime);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 900;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.2;
+  padding: 8px;
+}
+
+.whatsapp-builder-card {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+}
+
+/* Form Input Tokens & All Required States */
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.field-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 18px;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-3xl);
+  color: var(--color-text-primary);
+  background: var(--color-surface-ground);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--motion-duration-fast) ease, box-shadow var(--motion-duration-fast) ease;
+}
+
+.field-input:hover:not(:disabled) {
+  border-color: var(--color-text-primary);
+}
+
+.field-input:focus-visible {
+  border-color: var(--color-surface-base);
+  outline: 3px solid var(--color-surface-base) !important;
+  outline-offset: 2px !important;
+}
+
+.field-input:disabled {
+  background: #e9e9e9;
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+.field-input[aria-invalid="true"],
+.field-input.is-error {
+  border-color: var(--color-status-error);
+  background: var(--color-status-error-bg);
+}
+
+.field-error-msg {
+  font-size: var(--font-size-md);
+  color: var(--color-status-error);
+  font-weight: 600;
+  display: none;
+}
+
+.field-error-msg.is-visible {
+  display: block;
+}
+
+@media screen and (max-width: 900px) {
+  .whatsapp-order-grid {
+    grid-template-columns: 1fr;
+  }
+  .tibg--lp {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   15. POPULAR FAQS ACCORDION SECTION (Exact Tibico .collapsible-content)
+   ========================================================================== */
+.faq-section {
+  padding: 56px 0;
+}
+
+.collapsible-content-container {
+  max-width: var(--container-faq);
+  margin: 0 auto;
+}
+
+.collapsible-content-header {
+  margin-bottom: 2.8rem;
+}
+
+.collapsible-content-caption {
+  background-color: var(--color-surface-lime);
+  color: var(--color-text-primary);
+  padding: 5px 15px;
+  border-radius: var(--radius-xs);
+  display: inline-block;
+  font-size: var(--font-size-md);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.collapsible-content-heading {
+  font-size: var(--font-size-h2);
+  font-weight: 900;
+  margin: 0;
+}
+
+.accordion-item {
+  margin-bottom: 1.4rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(29, 29, 29, 0.1);
+  background: var(--color-surface-lavender);
+  transition: box-shadow var(--motion-duration-normal) ease;
+}
+
+.accordion-item:hover {
+  box-shadow: var(--shadow-1);
+}
+
+.accordion-summary {
+  padding: 1.8rem 2.2rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--color-surface-lavender);
+  position: relative;
+}
+
+.accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: none;
+  position: relative;
+  display: inline-block;
+}
+
+/* Exact Tibico Animated Hover Underline on FAQ Summary */
+.accordion__title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  transition: width var(--motion-duration-slower) ease-in-out, left var(--motion-duration-slower) ease-in-out;
+}
+
+.accordion-summary:hover .accordion__title::after {
+  width: 100%;
+  left: 0;
+}
+
+.accordion-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-surface-ground);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--motion-duration-normal) ease, background-color var(--motion-duration-normal) ease;
+}
+
+details[open] .accordion-icon {
+  transform: rotate(180deg);
+  background: var(--color-surface-lime);
+}
+
+.accordion__content {
+  padding: 0 2.2rem 2rem;
+  background: var(--color-surface-ground);
+  border-top: 1px solid rgba(29, 29, 29, 0.08);
+  padding-top: 1.6rem;
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+.accordion__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   16. CONTACT US SECTION (Plant Info & Inquiry Card)
+   ========================================================================== */
+.contact-section {
+  padding: 64px 0;
+  background: var(--color-surface-lavender);
+}
+
+.contact-grid {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.contact-info-card,
+.contact-form-card {
+  background: var(--color-surface-ground);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 16px;
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-md);
+}
+
+.contact-detail-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-surface-lime);
+  color: var(--color-surface-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   17. FOOTER SECTION, FLOATING BUTTONS & BACK-TO-TOP (Exact Tibico Footer)
+   ========================================================================== */
+.footer {
+  background: var(--color-surface-ground);
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+.footer__blocks-wrapper {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 0.8fr 1.2fr;
+  gap: 36px;
+  padding-bottom: 40px;
+}
+
+.footer-block__heading {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.footer-block p,
+.footer-block li,
+.footer-block a {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--color-surface-base);
+  text-decoration: none;
+}
+
+.footer-block a:hover {
+  text-decoration: underline;
+}
+
+.footer-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-promo-card {
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+}
+
+.footer-promo-card__body {
+  padding: 20px;
+  text-align: center;
+}
+
+.footer__content-bottom {
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer__copyright {
+  font-size: var(--font-size-md);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 990px) {
+  .footer__blocks-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer__blocks-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Floating Left Button (.floating-buttons .club-button) */
+.floating-buttons {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  z-index: 850;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  pointer-events: none;
+  transition: opacity var(--motion-duration-normal) ease, transform var(--motion-duration-normal) ease, visibility var(--motion-duration-normal) ease;
+}
+
+.floating-buttons.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.club-button {
+  align-items: center;
+  background-color: var(--color-surface-base);
+  color: var(--color-text-tertiary) !important;
+  cursor: pointer;
+  display: inline-flex;
+  height: 50px;
+  padding: 0 18px;
+  gap: 10px;
+  text-decoration: none !important;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  box-shadow: var(--shadow-3);
+  transition: transform var(--motion-duration-normal) ease, background-color var(--motion-duration-normal) ease;
+}
+
+.club-button:hover {
+  transform: translateY(-2px);
+}
+
+.club-button--whatsapp {
+  background-color: var(--color-surface-lime);
+  color: var(--color-surface-base) !important;
+  border: 2px solid var(--color-surface-base);
+}
+
+/* Back to Top Button (.back-to-top) */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--color-surface-base);
+  color: var(--color-text-tertiary);
+  border: 2px solid var(--color-surface-ground);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 850;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity var(--motion-duration-normal) ease, transform var(--motion-duration-normal) ease, visibility var(--motion-duration-normal) ease;
+  box-shadow: var(--shadow-3);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   18. DRAWERS (Cart / WhatsApp Inquiry Drawer & Search Modal)
+   ========================================================================== */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1200;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--motion-duration-slow) ease, visibility var(--motion-duration-slow) ease;
+}
+
+.drawer-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-drawer-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(440px, 92vw);
+  height: 100vh;
+  background: var(--color-surface-ground);
+  z-index: 1300;
+  transform: translateX(100%);
+  transition: transform var(--motion-duration-slow) var(--motion-ease-out);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-3);
+}
+
+.cart-drawer-panel.is-open {
+  transform: translateX(0);
+}
+
+.drawer-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawer-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.drawer-footer {
+  padding: 20px 24px;
+  border-top: 1px solid var(--color-border-subtle);
+  background: var(--color-surface-raised);
+}
+
+/* ==========================================================================
+   19. AOS SCROLL REVEAL ANIMATIONS (Exact Tibico data-aos="fade-up")
+   ========================================================================== */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--motion-duration-step6) var(--motion-ease-out),
+              transform var(--motion-duration-step6) var(--motion-ease-out);
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect Reduced Motion (WCAG 2.2 AA Requirement) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-aos="fade-up"] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

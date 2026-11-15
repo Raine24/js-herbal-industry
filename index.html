@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS Herbal Industry — Trust in Nature, Promise of Quality!</title>
+  <meta name="description" content="At JS Herbal Industry, we blend nature's finest botanical ingredients with modern scientific research and state-of-the-art manufacturing technology to produce premium herbal, skincare, and wellness products." />
+
+  <!-- Exact Tibico Adobe Typekit Font (neulis-neue) + Google Fonts Fallbacks -->
+  <link rel="stylesheet" href="https://use.typekit.net/iaa1ceh.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Josefin+Sans:wght@600;700&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- 1. PAGE LOADER (Exact Tibico .page-loader & .load-spinner) -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="load-spinner">&nbsp;</div>
+    <div class="page-loader-text">JS HERBAL INDUSTRY...</div>
+  </div>
+
+  <!-- 2. TOP FIXED SCROLL PROGRESS INDICATOR (Exact Tibico .line .progress) -->
+  <div class="line" aria-hidden="true">
+    <div class="progress" id="scrollProgress">&nbsp;</div>
+  </div>
+
+  <!-- 3. ACCESSIBILITY SKIP LINK (WCAG 2.2 AA Required) -->
+  <a class="skip-to-content-link" href="#MainContent">
+    Skip to content
+  </a>
+
+  <!-- 4. TOP SCROLLING ANNOUNCEMENT MARQUEE (Exact Tibico scrolling_text_ApJrzd) -->
+  <section class="text-scroll-section" aria-label="Announcement Bar">
+    <div class="scroll-text scroll-text--top color-option-4">
+      <div class="scroll-text-track">
+        <div class="scroll-text-item">
+          <p>JS HERBAL INDUSTRY — TRUST IN NATURE, PROMISE OF QUALITY!</p>
+          <span>•</span>
+          <p>ORDER ON WHATSAPP: 0342-7940339</p>
+          <span>•</span>
+          <p>KARACHI CHOWRANGI, KARACHI, PAKISTAN</p>
+          <span>•</span>
+          <p>WORKING HOURS: MONDAY – SATURDAY (9:00 AM – 6:00 PM)</p>
+          <span>•</span>
+          <p>JS HERBAL INDUSTRY – INSPIRED BY NATURE, DEFINED BY QUALITY!</p>
+        </div>
+        <div class="scroll-text-item" aria-hidden="true">
+          <p>JS HERBAL INDUSTRY — TRUST IN NATURE, PROMISE OF QUALITY!</p>
+          <span>•</span>
+          <p>ORDER ON WHATSAPP: 0342-7940339</p>
+          <span>•</span>
+          <p>KARACHI CHOWRANGI, KARACHI, PAKISTAN</p>
+          <span>•</span>
+          <p>WORKING HOURS: MONDAY – SATURDAY (9:00 AM – 6:00 PM)</p>
+          <span>•</span>
+          <p>JS HERBAL INDUSTRY – INSPIRED BY NATURE, DEFINED BY QUALITY!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. STICKY HEADER & NAVIGATION (Exact Tibico Sticky Header) -->
+  <div class="section-header" id="stickyHeader">
+    <header class="header page-width">
+      <!-- Mobile Menu Button -->
+      <button type="button" class="header__icon-btn mobile-menu-toggle" id="mobileMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Brand Logo -->
+      <div class="header__heading">
+        <a href="#home" class="header__heading-link" aria-label="JS Herbal Industry Home">
+          <span class="header__logo-mark" aria-hidden="true">JS</span>
+          <span class="header__logo-text">
+            <span class="header__logo-brand">JS HERBAL</span>
+            <span class="header__logo-sub">INDUSTRY • KARACHI</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- Desktop Mega Navigation -->
+      <nav class="main-navigation-mega" aria-label="Main Navigation">
+        <ul class="navigation-menu" role="list">
+          <li>
+            <a href="#home" class="nav-menu-item" aria-current="page">
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about-us" class="nav-menu-item">
+              <span>About Us</span>
+            </a>
+          </li>
+          <li>
+            <a href="#our-products" class="nav-menu-item">
+              <span>Our Products</span>
+              <span class="nav-badge-hot">HOT</span>
+            </a>
+          </li>
+          <li>
+            <a href="#mission-vision" class="nav-menu-item">
+              <span>Mission &amp; Vision</span>
+            </a>
+          </li>
+          <li>
+            <a href="#manufacturing" class="nav-menu-item">
+              <span>Manufacturing</span>
+            </a>
+          </li>
+          <li>
+            <a href="#why-choose-us" class="nav-menu-item">
+              <span>Why Choose Us</span>
+            </a>
+          </li>
+          <li>
+            <a href="#faqs" class="nav-menu-item">
+              <span>FAQs</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact-us" class="nav-menu-item">
+              <span>Contact Us</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Utility Icons -->
+      <div class="header__icons">
+        <button type="button" class="header__icon-btn" id="openSearchBtn" aria-label="Search products and sections">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <a href="https://wa.me/923427940339" target="_blank" rel="noopener" class="header__icon-btn" aria-label="Chat on WhatsApp 0342-7940339">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+        </a>
+
+        <button type="button" class="header__icon-btn" id="openCartBtn" aria-label="Open WhatsApp Order List">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count-bubble" id="cartCountBubble">3</span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- 6. TIBICO DUAL TOP BANNER (.tcc-banner) -->
+  <section class="tcc-banner" role="region" aria-label="JS Herbal Industry Direct Ordering Banner">
+    <p class="tcc-risk">
+      <strong>JS Herbal Industry – Inspired by Nature, Defined by Quality!</strong> Direct Phone / WhatsApp Support: <a href="tel:03427940339">0342-7940339</a> | Email: <a href="mailto:info@arherbal.com">info@arherbal.com</a>
+    </p>
+    <div class="tcc-band">
+      <span class="tcc-label">Order Your Favorite Products on WhatsApp — Karachi Chowrangi, Karachi</span>
+      <a class="tcc-btn" href="https://wa.me/923427940339?text=Hello%20JS%20Herbal%20Industry!%20I%20would%20like%20information%20regarding%20your%20products%20and%20prices." target="_blank" rel="noopener">Order on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main id="MainContent" role="main" tabindex="-1">
+
+    <!-- 7. HERO SLIDER SECTION (Exact Tibico .hero-slider Split Layout & Slide Transitions) -->
+    <section id="home" class="hero-slider-wrapper" aria-label="Hero Showcase">
+      <div class="hero-slider__viewport" id="heroSlider">
+
+        <!-- SLIDE 1: MAIN HERO (Lavender #f1e5f4) -->
+        <div class="hero-slider__cell is-selected" data-slide-index="0">
+          <div class="hero-slider__item">
+            <div class="hero-slider__content" style="background-color: #f1e5f4; color: #1d1d1d;">
+              <div class="hero-slider__content-inner">
+                <span class="hero-slider__eyebrow">JS HERBAL INDUSTRY</span>
+                <h1 class="hero-slider__heading">Trust in Nature, Promise of Quality!</h1>
+                <div class="hero-slider__text">
+                  <p>At JS Herbal Industry, we blend nature's finest botanical ingredients with modern scientific research and state-of-the-art manufacturing technology to produce premium herbal, skincare, and wellness products.</p>
+                  <p>Our mission is to bring the wholesome benefits of natural ingredients to every home, delivering products crafted to the highest standards of purity, hygiene, and customer satisfaction.</p>
+                  <p>We are deeply committed to providing our customers with an exceptional product experience through natural botanical ingredients, advanced technology, and professional manufacturing processes.</p>
+                  <p><strong>JS Herbal Industry – Inspired by Nature, Defined by Quality!</strong></p>
+                </div>
+                <div class="hero-slider__buttons">
+                  <a href="#our-products" class="button button--primary">
+                    Explore Our Products
+                  </a>
+                  <a href="https://wa.me/923427940339?text=Hello%20JS%20Herbal%20Industry!%20I%20would%20like%20to%20place%20an%20order%20via%20WhatsApp." target="_blank" rel="noopener" class="button button--secondary">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-slider__media">
+              <img src="assets/hero-slide-1.jpg" alt="JS Herbal Industry natural botanical skincare and herbal formulations" />
+              <div class="hero-slider__media-overlay-card">
+                <strong>Inspired by Nature, Defined by Quality!</strong>
+                <span>Herbal, Skincare &amp; Wellness Manufacturing — Karachi Chowrangi, Karachi</span>
+              </div>
+              <!-- Rotating Seal Badge SVG (Exact Tibico .hero-slider__media-badge) -->
+              <svg class="hero-slider__media-badge" viewBox="0 0 200 200" aria-hidden="true">
+                <circle cx="100" cy="100" r="92" fill="#dde9ae" stroke="#1d1d1d" stroke-width="3" />
+                <circle cx="100" cy="100" r="64" fill="none" stroke="#1d1d1d" stroke-width="1.5" stroke-dasharray="4 4" />
+                <path id="badgePath1" d="M 100, 100 m -74, 0 a 74,74 0 1,1 148,0 a 74,74 0 1,1 -148,0" fill="none" />
+                <text fill="#1d1d1d" font-size="11" font-weight="800" letter-spacing="2.2">
+                  <textPath href="#badgePath1" startOffset="0%">• JS HERBAL INDUSTRY • TRUST IN NATURE •</textPath>
+                </text>
+                <text x="100" y="96" text-anchor="middle" fill="#1d1d1d" font-size="18" font-weight="900">100%</text>
+                <text x="100" y="114" text-anchor="middle" fill="#1d1d1d" font-size="10" font-weight="800" letter-spacing="1">NATURAL QUALITY</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2: OUR MISSION (Botanical Lime #dee9af) -->
+        <div class="hero-slider__cell" data-slide-index="1">
+          <div class="hero-slider__item">
+            <div class="hero-slider__content" style="background-color: #dee9af; color: #1d1d1d;">
+              <div class="hero-slider__content-inner">
+                <span class="hero-slider__eyebrow">OUR MISSION</span>
+                <h2 class="hero-slider__heading">Bringing Natural Quality to Every Home</h2>
+                <div class="hero-slider__text">
+                  <p>The mission of JS Herbal Industry is to bring premium herbal, skincare, and wellness products crafted from natural botanical ingredients to as many households and consumers as possible.</p>
+                  <p>By adopting state-of-the-art manufacturing technology and quality-focused production workflows, we develop products that cater precisely to our customers' everyday wellness routines and expectations.</p>
+                  <p><strong>Our commitment also encompasses empowering customers with clear product information, dedicated guidance, and dependable support.</strong></p>
+                </div>
+                <div class="hero-slider__buttons">
+                  <a href="#our-products" class="button button--primary">
+                    Explore Our Products
+                  </a>
+                  <a href="#about-us" class="button button--secondary">
+                    About Us
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-slider__media">
+              <img src="assets/hero-slide-2.jpg" alt="JS Herbal Industry botanical skincare and hygienic herbal extraction formulations" />
+              <div class="hero-slider__media-overlay-card">
+                <strong>Natural Quality for Every Home</strong>
+                <span>Botanical Ingredients • Advanced Research • Modern Technology</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3: OUR VISION (Warm Botanical Amber #e9ccaf) -->
+        <div class="hero-slider__cell" data-slide-index="2">
+          <div class="hero-slider__item">
+            <div class="hero-slider__content" style="background-color: #e9ccaf; color: #1d1d1d;">
+              <div class="hero-slider__content-inner">
+                <span class="hero-slider__eyebrow">OUR VISION</span>
+                <h2 class="hero-slider__heading">A Benchmark of Trust and Quality in Herbal Manufacturing</h2>
+                <div class="hero-slider__text">
+                  <p>Our vision is to establish JS Herbal Industry among Pakistan's premier and most trusted herbal manufacturing brands.</p>
+                  <p>We aspire for our products to be recognized and celebrated for their impeccable quality, scientifically backed formulations, professional packaging, and customer satisfaction.</p>
+                  <p><strong>Through continuous innovation, modern technology, and rigorous quality refinement, we remain dedicated to expanding our product portfolio and delivering lasting value.</strong></p>
+                </div>
+                <div class="hero-slider__buttons">
+                  <a href="#manufacturing" class="button button--primary">
+                    Our Manufacturing Plant
+                  </a>
+                  <a href="#contact-us" class="button button--secondary">
+                    Contact JS Herbal
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-slider__media">
+              <img src="assets/hero-slide-3.jpg" alt="JS Herbal Industry wellness elixir, vitality supplements and luxury packaging" />
+              <div class="hero-slider__media-overlay-card">
+                <strong>Pakistan's Trusted Herbal Brand</strong>
+                <span>Excellence in Formulation • Professional Packaging • Customer Satisfaction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="hero-slider__controls" aria-label="Slide controls">
+          <button type="button" class="hero-slider__arrow" id="heroPrev" aria-label="Previous slide">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <div class="hero-slider__dots" role="tablist" aria-label="Select slide">
+            <button type="button" class="hero-slider__dot" role="tab" aria-selected="true" aria-label="Slide 1: Trust in Nature" data-slide-to="0"></button>
+            <button type="button" class="hero-slider__dot" role="tab" aria-selected="false" aria-label="Slide 2: Our Mission" data-slide-to="1"></button>
+            <button type="button" class="hero-slider__dot" role="tab" aria-selected="false" aria-label="Slide 3: Our Vision" data-slide-to="2"></button>
+          </div>
+          <button type="button" class="hero-slider__arrow" id="heroNext" aria-label="Next slide">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tibico Trust Bar -->
+      <div class="hero-slider__trust-bar">
+        <ul class="trust-bar__items">
+          <li class="trust-bar__item">
+            <span class="trust-bar__stars" aria-hidden="true">★★★★★</span>
+            <span>Botanical Ingredients &amp; Herbal Formulations</span>
+          </li>
+          <li class="trust-bar__item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Hygienic Extraction &amp; Modern Blending</span>
+          </li>
+          <li class="trust-bar__item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Karachi Chowrangi, Karachi, Pakistan</span>
+          </li>
+          <li class="trust-bar__item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Direct WhatsApp Ordering: 0342-7940339</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8. OUR PRODUCTS SECTION (Exact Tibico .tbc-bs.is-soft 4-Column Product Grid) -->
+    <section id="our-products" class="tbc-bs is-soft" data-aos="fade-up" aria-labelledby="productsHeading">
+      <div class="tbc-wrap">
+        <div class="tbc-head">
+          <span class="tbc-eyebrow">OUR PRODUCTS</span>
+          <h2 id="productsHeading">Your Wellness Needs, Our Quality Assurance</h2>
+          <p>At JS Herbal Industry, we formulate and manufacture across diverse categories of herbal, skincare, and wellness solutions. We ensure clear product guidance and tailored botanical formulations across every range.</p>
+        </div>
+
+        <div class="tbc-grid">
+          <!-- Category 1: Herbal Products -->
+          <article class="tbc-card is-featured">
+            <div class="tbc-band">
+              <span class="tbc-name">CATEGORY 01 • PERSONAL CARE &amp; LIFESTYLE</span>
+              <span class="tbc-size">1. Herbal Products</span>
+            </div>
+            <div class="tbc-media">
+              <span class="tbc-best">Featured Range</span>
+              <img src="assets/product-herbal.jpg" alt="1. Herbal Products - JS Herbal Industry Botanical ingredients and herbal formulations" loading="lazy" />
+            </div>
+            <div class="tbc-body">
+              <div class="tbc-panel">
+                <span class="tbc-lbl">Botanical Ingredients &amp; Formulations</span>
+                <p class="tbc-desc">Crafted from pure botanical ingredients and time-honored herbal formulations, our herbal range is designed for discerning customers who embrace natural care in their daily lifestyle.</p>
+                <div class="tbc-or">
+                  We prioritize strict <strong>quality assurance and hygiene</strong> standards across ingredient selection, formulation development, and manufacturing.
+                </div>
+              </div>
+              <span class="tbc-ship">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Hygienic Extraction &amp; Quality Assured
+              </span>
+              <button type="button" class="tbc-btn js-add-inquiry" data-product="1. Herbal Products">
+                Order on WhatsApp
+              </button>
+            </div>
+          </article>
+
+          <!-- Category 2: Skincare Products -->
+          <article class="tbc-card">
+            <div class="tbc-band">
+              <span class="tbc-name">CATEGORY 02 • SKINCARE &amp; GROOMING</span>
+              <span class="tbc-size">2. Skincare Products</span>
+            </div>
+            <div class="tbc-media">
+              <span class="tbc-best">Skincare Line</span>
+              <img src="assets/product-skincare.jpg" alt="2. Skincare Products - JS Herbal Industry Botanical Skincare Range" loading="lazy" />
+            </div>
+            <div class="tbc-body">
+              <div class="tbc-panel">
+                <span class="tbc-lbl">Skin Nourishment &amp; Daily Care</span>
+                <p class="tbc-desc">Explore JS Herbal Industry's skincare collection tailored for radiant skin nourishment, replenishment, and refined personal grooming.</p>
+                <div class="tbc-or">
+                  Formulated with careful attention to distinct skin nourishment requirements, prioritizing <strong>ingredient purity and protective packaging</strong> for an elevated user experience.
+                </div>
+              </div>
+              <span class="tbc-ship">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Superior Product Experience
+              </span>
+              <button type="button" class="tbc-btn js-add-inquiry" data-product="2. Skincare Products">
+                Order on WhatsApp
+              </button>
+            </div>
+          </article>
+
+          <!-- Category 3: Wellness Products -->
+          <article class="tbc-card">
+            <div class="tbc-band">
+              <span class="tbc-name">CATEGORY 03 • HEALTHY LIFESTYLE</span>
+              <span class="tbc-size">3. Wellness Products</span>
+            </div>
+            <div class="tbc-media">
+              <span class="tbc-best">Wellness Line</span>
+              <img src="assets/product-wellness.jpg" alt="3. Wellness Products - JS Herbal Industry Healthy lifestyle and personal wellness" loading="lazy" />
+            </div>
+            <div class="tbc-body">
+              <div class="tbc-panel">
+                <span class="tbc-lbl">Personal Wellness &amp; Vitality</span>
+                <p class="tbc-desc">Discover our wellness product range crafted to support everyday vitality, active health balance, and holistic personal well-being.</p>
+                <div class="tbc-or">
+                  Developed to address essential lifestyle needs with <strong>precision formulations, verified botanical extracts</strong>, and targeted daily benefits.
+                </div>
+              </div>
+              <span class="tbc-ship">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Modern Blending &amp; Formulation
+              </span>
+              <button type="button" class="tbc-btn js-add-inquiry" data-product="3. Wellness Products">
+                Order on WhatsApp
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 4: Find Your Perfect Product! -->
+          <article class="tbc-card">
+            <div class="tbc-band">
+              <span class="tbc-name">DIRECT CUSTOMER SUPPORT • 0342-7940339</span>
+              <span class="tbc-size">Find Your Perfect Product!</span>
+            </div>
+            <div class="tbc-media">
+              <span class="tbc-best">Direct Guidance</span>
+              <img src="assets/product-catalog-support.jpg" alt="Find Your Perfect Product - Complete JS Herbal Industry Collection" loading="lazy" />
+            </div>
+            <div class="tbc-body">
+              <div class="tbc-panel">
+                <span class="tbc-lbl">Prices, Ingredients &amp; Usage Guidance</span>
+                <p class="tbc-desc">Connect directly with our team for detailed information on available products, bulk pricing, active ingredients, and usage guidelines.</p>
+                <div class="tbc-or">
+                  <strong>Phone / WhatsApp:</strong> 0342-7940339<br />
+                  <strong>Email:</strong> info@arherbal.com
+                </div>
+              </div>
+              <span class="tbc-ship">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Mon – Sat: 9:00 AM – 6:00 PM
+              </span>
+              <a href="#whatsapp-ordering" class="tbc-btn">
+                Contact Our Team
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. MID-PAGE SCROLLING TEXT MARQUEE (Exact Tibico scrolling_text_ywfgfr) -->
+    <section class="text-scroll-section" aria-label="Key Brand Pillars">
+      <div class="scroll-text scroll-text--mid color-option-2" data-aos="fade-up">
+        <div class="scroll-text-track">
+          <div class="scroll-text-item">
+            <p>Botanical Ingredients</p>
+            <span class="scroll-circle-decoration" aria-hidden="true">✦</span>
+            <p>Modern Manufacturing Facility</p>
+            <span class="scroll-circle-decoration" aria-hidden="true">✦</span>
+            <p>Quality-Focused Production</p>
+            <span class="scroll-circle-decoration" aria-hidden="true">✦</span>
+            <p>Hygienic Extraction</p>
+            <span class="scroll-circle-decoration" aria-hidden="true">✦</span>
+            <p>Advanced Blending Technology</p>
+            <span class="scroll-circle-decoration" aria-hidden="true">✦</span>
+            <p>Professional Packaging</p>
+            <span class="scroll-circle-decoration" aria-hidden="true">✦</span>
+            <p>Premium Product Presentation</p>
+            <span class="scroll-circle-decoration" aria-hidden="true">✦</span>
+            <p>Customer Satisfaction</p>
+            <span class="scroll-circle-decoration" aria-hidden="true">✦</span>
+          </div>
+          <div class="scroll-text-item" aria-hidden="true">
+            <p>Botanical Ingredients</p>
+            <span class="scroll-circle-decoration">✦</span>
+            <p>Modern Manufacturing Facility</p>
+            <span class="scroll-circle-decoration">✦</span>
+            <p>Quality-Focused Production</p>
+            <span class="scroll-circle-decoration">✦</span>
+            <p>Hygienic Extraction</p>
+            <span class="scroll-circle-decoration">✦</span>
+            <p>Advanced Blending Technology</p>
+            <span class="scroll-circle-decoration">✦</span>
+            <p>Professional Packaging</p>
+            <span class="scroll-circle-decoration">✦</span>
+            <p>Premium Product Presentation</p>
+            <span class="scroll-circle-decoration">✦</span>
+            <p>Customer Satisfaction</p>
+            <span class="scroll-circle-decoration">✦</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. SPOTLIGHT SECTION: WHY CHOOSE US (Exact Tibico 3-Column "Anatomy of a Bottle" Layout) -->
+    <section id="why-choose-us" class="spotlight" aria-labelledby="whyChooseUsTitle">
+      <div class="page-width">
+        <div class="spotlight__header" data-aos="fade-up">
+          <span class="tbc-eyebrow">WHY CHOOSE US</span>
+          <h2 id="whyChooseUsTitle" class="spotlight__title">Why Choose JS Herbal Industry?</h2>
+        </div>
+
+        <div class="spotlight__columns" data-aos="fade-up">
+          <!-- Left Side Column (3 Features) -->
+          <div class="spotlight__col spotlight__col--side">
+            <div class="spotlight__feature">
+              <div class="spotlight__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+              </div>
+              <h3 class="spotlight__feature-title">Botanical Ingredients</h3>
+              <p class="spotlight__feature-text">We consider natural botanical extracts and authentic herbal formulations the cornerstone of our product development.</p>
+            </div>
+
+            <div class="spotlight__feature">
+              <div class="spotlight__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path></svg>
+              </div>
+              <h3 class="spotlight__feature-title">Modern Manufacturing Facility</h3>
+              <p class="spotlight__feature-text">Our production plant is equipped with modern extraction, blending, and automated packaging infrastructure.</p>
+            </div>
+
+            <div class="spotlight__feature">
+              <div class="spotlight__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </div>
+              <h3 class="spotlight__feature-title">Quality-Focused Production</h3>
+              <p class="spotlight__feature-text">We maintain rigorous quality standards, pristine hygiene, and precise manufacturing protocols at every single stage.</p>
+            </div>
+          </div>
+
+          <!-- Centerpiece Image -->
+          <div class="spotlight__col spotlight__col--center">
+            <div class="spotlight__image">
+              <img src="assets/spotlight-centerpiece.jpg" alt="JS Herbal Industry botanical formulation centerpiece" class="spotlight__img" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Right Side Column (3 Features) -->
+          <div class="spotlight__col spotlight__col--side">
+            <div class="spotlight__feature">
+              <div class="spotlight__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              </div>
+              <h3 class="spotlight__feature-title">Premium Product Presentation</h3>
+              <p class="spotlight__feature-text">We treat packaging design, product protection, and bottle presentation as an essential part of the customer experience.</p>
+            </div>
+
+            <div class="spotlight__feature">
+              <div class="spotlight__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </div>
+              <h3 class="spotlight__feature-title">Customer Satisfaction</h3>
+              <p class="spotlight__feature-text">We are dedicated to providing every customer with transparent product insights, helpful guidance, and responsive support.</p>
+            </div>
+
+            <div class="spotlight__feature">
+              <div class="spotlight__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <h3 class="spotlight__feature-title">Direct Customer Support</h3>
+              <p class="spotlight__feature-text">Connect with us directly via phone or WhatsApp for product inquiries, real-time availability, and instant orders.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spotlight Bottom 5-Item Track (Exact Tibico .spotlight__bottom-track) -->
+        <div class="spotlight__bottom" data-aos="fade-up">
+          <div class="spotlight__bottom-track">
+            <div class="spotlight__bottom-item">
+              <div class="spotlight__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h3 class="spotlight__bottom-title">Natural Ingredients</h3>
+              <p class="spotlight__bottom-text">Pure herbal formulations and rigorous raw material selection</p>
+            </div>
+            <div class="spotlight__bottom-item">
+              <div class="spotlight__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31M14 9.3V1.99M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"></path></svg>
+              </div>
+              <h3 class="spotlight__bottom-title">Advanced Research</h3>
+              <p class="spotlight__bottom-text">Scientific research combined with contemporary production technology</p>
+            </div>
+            <div class="spotlight__bottom-item">
+              <div class="spotlight__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+              </div>
+              <h3 class="spotlight__bottom-title">Hygienic Extraction</h3>
+              <p class="spotlight__bottom-text">Strict sanitization and controlled botanical extraction standards</p>
+            </div>
+            <div class="spotlight__bottom-item">
+              <div class="spotlight__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              </div>
+              <h3 class="spotlight__bottom-title">Advanced Blending</h3>
+              <p class="spotlight__bottom-text">Uniform batch consistency and calibrated formulation precision</p>
+            </div>
+            <div class="spotlight__bottom-item">
+              <div class="spotlight__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+              <h3 class="spotlight__bottom-title">Protective Packaging</h3>
+              <p class="spotlight__bottom-text">Superior barrier protection, safe sealing, and elegant presentation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. RICH TEXT SECTION: MISSION, VISION & BRAND COMMITMENT (Exact Tibico .color-option-2 Lavender + Animated Hand Underline) -->
+    <section id="mission-vision" class="rich-text-section color-option-2" data-aos="fade-up" aria-labelledby="missionVisionHeading">
+      <div class="page-width rich-text-wrapper">
+        <span class="tbc-eyebrow">TRUST IN NATURE • PROMISE OF QUALITY</span>
+        <h2 id="missionVisionHeading" class="animated-highlight">
+          JS Herbal Industry — <em>Inspired by Nature, Defined by Quality!</em>
+        </h2>
+        <p style="max-width: 760px; margin: 0 auto; font-size: 16.2px;">
+          Our objective is to deliver the wholesome power of natural ingredients to every household, advancing our brand on the bedrock of uncompromising quality and consumer trust.
+        </p>
+
+        <div class="mission-vision-grid">
+          <!-- OUR MISSION -->
+          <article class="mv-card" data-aos="fade-up">
+            <span class="mv-card__badge">OUR MISSION</span>
+            <h3>Bringing Natural Quality to Every Home</h3>
+            <p>The mission of JS Herbal Industry is to bring premium herbal, skincare, and wellness products crafted from natural botanical ingredients to as many households and consumers as possible.</p>
+            <p>By adopting state-of-the-art manufacturing technology and quality-focused production workflows, we develop products that cater precisely to our customers' everyday wellness routines and expectations.</p>
+            <p>Our commitment also encompasses empowering customers with clear product information, dedicated guidance, and dependable support.</p>
+          </article>
+
+          <!-- OUR VISION -->
+          <article class="mv-card" data-aos="fade-up">
+            <span class="mv-card__badge">OUR VISION</span>
+            <h3>A Benchmark of Trust and Quality in Herbal Manufacturing</h3>
+            <p>Our vision is to establish JS Herbal Industry among Pakistan's premier and most trusted herbal manufacturing brands.</p>
+            <p>We aspire for our products to be recognized and celebrated for their impeccable quality, scientifically backed formulations, professional packaging, and customer satisfaction.</p>
+            <p>Through continuous innovation, modern technology, and rigorous quality refinement, we remain dedicated to expanding our product portfolio and delivering lasting value.</p>
+          </article>
+
+          <!-- OUR BRAND COMMITMENT -->
+          <article class="mv-card" data-aos="fade-up">
+            <span class="mv-card__badge">OUR BRAND COMMITMENT</span>
+            <h3>Your Trust, Our Responsibility</h3>
+            <p>At JS Herbal Industry, our primary focus is forging lasting, trustworthy relationships with each and every customer.</p>
+            <p>Our commitment extends beyond manufacturing to providing comprehensive product information, accurate usage guidance, and professional customer care.</p>
+            <p>Every customer is deeply valued, and we continuously drive our brand forward grounded in integrity and uncompromising quality.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. SPLIT SECTION 1: ABOUT US (Exact Tibico .custom-image-with-text 55%/45% Grid) -->
+    <section id="about-us" class="custom-image-with-text-section color-option-1" aria-labelledby="aboutHeading">
+      <div class="page-width">
+        <div class="image-with-text-grid">
+          <div class="image-with-text-media-item" data-aos="fade-up">
+            <div class="image-with-text-media">
+              <img src="assets/about-js-herbal.jpg" alt="JS Herbal Industry – The Perfect Synergy of Nature and Modern Technology" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="image-with-text-text-item" data-aos="fade-up">
+            <div class="image-with-text-content">
+              <p class="image-with-text-text--subtitle">ABOUT US</p>
+              <h2 id="aboutHeading" class="image-with-text-heading">
+                JS Herbal Industry – The Perfect Synergy of Nature and Modern Technology
+              </h2>
+              <div class="image-with-text-text rte">
+                <p>JS Herbal Industry is a modern herbal manufacturing enterprise dedicated to producing premium herbal, skincare, and wellness products by combining natural botanical ingredients, scientific research, and advanced production technology.</p>
+                <p>We understand that discerning customers seek not just products, but verified quality, authentic trust, and an elevated experience. That is why we place paramount importance on hygiene, ingredient authenticity, quality control standards, and premium packaging across our operations.</p>
+                <p>Located at Karachi Chowrangi, Karachi, Pakistan, our manufacturing plant is equipped with modern production machinery and cleanroom facilities, utilizing advanced technology for hygienic botanical extraction, calibrated blending, and automated packaging.</p>
+                <p>We ensure that every batch is produced following disciplined manufacturing methodologies and delivered to customers with exquisite presentation.</p>
+                <p><strong>Our core aspiration is to establish JS Herbal Industry as a hallmark herbal brand celebrated for product excellence, continuous innovation, and exceptional customer service.</strong></p>
+              </div>
+              <a href="#our-products" class="button-arrow button button--primary">
+                Explore Our Products
+                <span class="icon-arrow-circle" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. SPLIT SECTION 2 (REVERSED): OUR MANUFACTURING PLANT (Exact Tibico .image-with-text-grid--reverse) -->
+    <section id="manufacturing" class="custom-image-with-text-section color-option-1" aria-labelledby="plantHeading">
+      <div class="page-width">
+        <div class="image-with-text-grid image-with-text-grid--reverse">
+          <div class="image-with-text-media-item" data-aos="fade-up">
+            <div class="image-with-text-media">
+              <img src="assets/manufacturing-plant.jpg" alt="JS Herbal Industry Manufacturing Plant at Karachi Chowrangi, Karachi" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="image-with-text-text-item" data-aos="fade-up">
+            <div class="image-with-text-content">
+              <p class="image-with-text-text--subtitle">OUR MANUFACTURING PLANT</p>
+              <h2 id="plantHeading" class="image-with-text-heading">
+                Modern Manufacturing, Hygienic Protocols &amp; Professional Packaging
+              </h2>
+              <div class="image-with-text-text rte">
+                <p><strong>JS Herbal Industry's modern production plant is located at Karachi Chowrangi, Karachi, Pakistan.</strong></p>
+                <p>Our manufacturing facility is purposefully engineered so that every phase—from raw ingredient preparation and extraction to blending and packaging—strictly adheres to pristine hygiene standards and disciplined quality benchmarks.</p>
+                <p>We continuously upgrade our machinery and methodologies to enhance manufacturing precision:</p>
+                <ul>
+                  <li><strong>Hygienic Extraction:</strong> We employ sanitized, temperature-controlled processes for botanical preparation and extraction in accordance with formulation specifications, maintaining strict cleanliness and delicate ingredient handling.</li>
+                  <li><strong>Advanced Blending Technology:</strong> High-precision stainless steel blending machinery is utilized to integrate formulations homogeneously, ensuring consistent potency, uniform texture, and calibrated batch preparation.</li>
+                  <li><strong>Professional Packaging:</strong> Packaging is fundamental to product longevity and presentation. We prioritize hygienic sealing, barrier protection, and aesthetics so products reach consumers in pristine condition.</li>
+                </ul>
+              </div>
+              <a href="https://wa.me/923427940339?text=Hello%20JS%20Herbal%20Industry!%20I%20would%20like%20information%20regarding%20your%20manufacturing%20and%20products." target="_blank" rel="noopener" class="button-arrow button button--primary">
+                Order on WhatsApp
+                <span class="icon-arrow-circle" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. SPLIT SECTION 3: OUR QUALITY COMMITMENT (Exact Tibico .custom-image-with-text) -->
+    <section id="quality-commitment" class="custom-image-with-text-section color-option-1" aria-labelledby="qualityHeading">
+      <div class="page-width">
+        <div class="image-with-text-grid">
+          <div class="image-with-text-media-item" data-aos="fade-up">
+            <div class="image-with-text-media">
+              <img src="assets/quality-commitment.jpg" alt="JS Herbal Industry Quality Commitment - Quality Is Our Defining Identity" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="image-with-text-text-item" data-aos="fade-up">
+            <div class="image-with-text-content">
+              <p class="image-with-text-text--subtitle">OUR QUALITY COMMITMENT</p>
+              <h2 id="qualityHeading" class="image-with-text-heading">
+                Quality Is Our Defining Identity
+              </h2>
+              <div class="image-with-text-text rte">
+                <p>At JS Herbal Industry, quality is the foundational cornerstone of our organization.</p>
+                <p>Our focus centers on meticulous raw botanical selection, hygienic preparation protocols, modern blending procedures, and durable packaging. We enforce strict hygiene and good manufacturing practices at every single step.</p>
+                <p>We recognize that earning and sustaining customer confidence is vital to our enduring growth and reputation.</p>
+                <p><strong>For this reason, we accord equal priority to transparent product education, courteous consumer guidance, and exceptional service quality as we do to manufacturing excellence.</strong></p>
+              </div>
+              <a href="#contact-us" class="button-arrow button button--primary">
+                Contact JS Herbal
+                <span class="icon-arrow-circle" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. TIBICO CORE VALUES SECTION (Exact Lavender #efe6f3 .tibico-core-values 8-Item Grid) -->
+    <section class="tibico-core-values" aria-labelledby="coreValuesTitle">
+      <div class="page-width tibico-core-values__inner">
+        <div class="tibico-core-values__header" data-aos="fade-up">
+          <h2 id="coreValuesTitle" class="tibico-core-values__title">
+            JS Herbal Industry Core Pillars
+          </h2>
+          <div class="tibico-core-values__content">
+            <p>The ultimate synergy of botanical ingredients, modern manufacturing technology, and quality-focused production — Karachi Chowrangi, Karachi, Pakistan.</p>
+          </div>
+        </div>
+
+        <div class="tibico-core-values__items">
+          <div class="tibico-core-values__item" data-aos="fade-up">
+            <div class="tibico-core-values__item-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+            </div>
+            <h3 class="tibico-core-values__item-title">Hygienic Extraction</h3>
+            <p class="tibico-core-values__item-text">Sanitary processing and cleanroom extraction protocols for delicate raw botanical ingredients.</p>
+          </div>
+
+          <div class="tibico-core-values__item" data-aos="fade-up">
+            <div class="tibico-core-values__item-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31M14 9.3V1.99M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"></path></svg>
+            </div>
+            <h3 class="tibico-core-values__item-title">Advanced Blending</h3>
+            <p class="tibico-core-values__item-text">High-precision modern blending equipment ensuring uniform potency and batch consistency.</p>
+          </div>
+
+          <div class="tibico-core-values__item" data-aos="fade-up">
+            <div class="tibico-core-values__item-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+            <h3 class="tibico-core-values__item-title">Professional Packaging</h3>
+            <p class="tibico-core-values__item-text">Hygienic sealing, barrier protection, and aesthetic presentation so goods arrive pristine.</p>
+          </div>
+
+          <div class="tibico-core-values__item" data-aos="fade-up">
+            <div class="tibico-core-values__item-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path></svg>
+            </div>
+            <h3 class="tibico-core-values__item-title">Botanical Ingredients</h3>
+            <p class="tibico-core-values__item-text">Pure herbal extracts and authentic botanicals at the core of all our product formulations.</p>
+          </div>
+
+          <div class="tibico-core-values__item" data-aos="fade-up">
+            <div class="tibico-core-values__item-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="tibico-core-values__item-title">Quality Identity</h3>
+            <p class="tibico-core-values__item-text">Uncompromising adherence to sanitary benchmarks and disciplined manufacturing practices.</p>
+          </div>
+
+          <div class="tibico-core-values__item" data-aos="fade-up">
+            <div class="tibico-core-values__item-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+            </div>
+            <h3 class="tibico-core-values__item-title">Customer Guidance</h3>
+            <p class="tibico-core-values__item-text">Transparent product insights, knowledgeable guidance, and dedicated support.</p>
+          </div>
+
+          <div class="tibico-core-values__item" data-aos="fade-up">
+            <div class="tibico-core-values__item-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3 class="tibico-core-values__item-title">Karachi Plant</h3>
+            <p class="tibico-core-values__item-text">Purpose-built facility equipped with contemporary machinery at Karachi Chowrangi, Pakistan.</p>
+          </div>
+
+          <div class="tibico-core-values__item" data-aos="fade-up">
+            <div class="tibico-core-values__item-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </div>
+            <h3 class="tibico-core-values__item-title">WhatsApp Ordering</h3>
+            <p class="tibico-core-values__item-text">Connect directly via 0342-7940339 for effortless ordering, quotes, and rapid delivery updates.</p>
+          </div>
+        </div>
+
+        <div class="tibico-core-values__button-wrap" data-aos="fade-up">
+          <a href="#whatsapp-ordering" class="button button--primary">
+            Order on WhatsApp — 0342-7940339
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16. HORIZONTAL SCROLLING FACTORY & PRODUCT GALLERY (Exact Tibico .image-gallery-section) -->
+    <section class="image-gallery-section" aria-label="Manufacturing and Product Gallery">
+      <div class="image-gallery-track">
+        <div class="image-gallery-card">
+          <img src="assets/product-herbal.jpg" alt="1. Herbal Products - JS Herbal Industry Botanical Ingredients" loading="lazy" />
+          <div class="image-gallery-card__caption">1. Herbal Products — Botanical Ingredients</div>
+        </div>
+        <div class="image-gallery-card">
+          <img src="assets/product-skincare.jpg" alt="2. Skincare Products - JS Herbal Industry Daily Skin Nourishment" loading="lazy" />
+          <div class="image-gallery-card__caption">2. Skincare Products — Daily Skin Nourishment</div>
+        </div>
+        <div class="image-gallery-card">
+          <img src="assets/product-wellness.jpg" alt="3. Wellness Products - JS Herbal Industry Healthy Lifestyle and Balance" loading="lazy" />
+          <div class="image-gallery-card__caption">3. Wellness Products — Healthy Lifestyle &amp; Balance</div>
+        </div>
+        <div class="image-gallery-card">
+          <img src="assets/gallery-extraction.jpg" alt="Hygienic Extraction at Karachi Chowrangi Plant" loading="lazy" />
+          <div class="image-gallery-card__caption">Hygienic Extraction — Karachi Chowrangi Plant</div>
+        </div>
+        <div class="image-gallery-card">
+          <img src="assets/gallery-blending.jpg" alt="Modern Blending Technology & Formulation" loading="lazy" />
+          <div class="image-gallery-card__caption">Advanced Blending Technology — Batch Uniformity</div>
+        </div>
+        <div class="image-gallery-card">
+          <img src="assets/gallery-packaging.jpg" alt="Professional Packaging & Presentation" loading="lazy" />
+          <div class="image-gallery-card__caption">Professional Packaging — Barrier Protection</div>
+        </div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="image-gallery-card" aria-hidden="true">
+          <img src="assets/product-herbal.jpg" alt="" loading="lazy" />
+          <div class="image-gallery-card__caption">1. Herbal Products — Botanical Ingredients</div>
+        </div>
+        <div class="image-gallery-card" aria-hidden="true">
+          <img src="assets/product-skincare.jpg" alt="" loading="lazy" />
+          <div class="image-gallery-card__caption">2. Skincare Products — Daily Skin Nourishment</div>
+        </div>
+        <div class="image-gallery-card" aria-hidden="true">
+          <img src="assets/product-wellness.jpg" alt="" loading="lazy" />
+          <div class="image-gallery-card__caption">3. Wellness Products — Healthy Lifestyle &amp; Balance</div>
+        </div>
+        <div class="image-gallery-card" aria-hidden="true">
+          <img src="assets/gallery-extraction.jpg" alt="" loading="lazy" />
+          <div class="image-gallery-card__caption">Hygienic Extraction — Karachi Chowrangi Plant</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17. WHATSAPP ORDERING SECTION (Interactive Order Builder) -->
+    <section id="whatsapp-ordering" class="whatsapp-order-section color-option-1" data-aos="fade-up" aria-labelledby="waOrderHeading">
+      <div class="page-width">
+        <div class="whatsapp-order-grid">
+          <div>
+            <span class="image-with-text-text--subtitle">WHATSAPP ORDERING</span>
+            <h2 id="waOrderHeading" class="image-with-text-heading">
+              Order Your Favorite Products Directly on WhatsApp
+            </h2>
+            <div class="image-with-text-text rte">
+              <p><strong>Ordering from JS Herbal Industry is faster and easier than ever.</strong></p>
+              <p>Reach out to our dedicated team on WhatsApp to explore currently available products, botanical formulations, and real-time pricing.</p>
+              <p>Simply share your required product names and quantities, and our team will guide you smoothly through the order and fulfillment process.</p>
+              <p><strong>WhatsApp Number: 0342-7940339</strong></p>
+            </div>
+
+            <!-- Tibico Guarantee-Style Callout (.tibg--lp) -->
+            <div class="tibg--lp">
+              <div class="tibg__badge" aria-hidden="true">
+                <span>DIRECT</span>
+                <span style="font-size: 14px; margin: 2px 0;">WHATSAPP</span>
+                <span>SUPPORT</span>
+              </div>
+              <div>
+                <h3 style="margin: 0 0 6px; font-size: 20px;">WhatsApp Number: 0342-7940339</h3>
+                <p style="margin: 0 0 12px; font-size: 14.5px; line-height: 1.5;">
+                  Monday to Saturday (9:00 AM – 6:00 PM), our customer care representatives are ready to assist you with product availability, ingredients, pricing, and orders.
+                </p>
+                <a href="https://wa.me/923427940339?text=Hello%20JS%20Herbal%20Industry!%20I%20would%20like%20to%20order%20products." target="_blank" rel="noopener" class="button-arrow button button--primary">
+                  Order on WhatsApp
+                  <span class="icon-arrow-circle" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive WhatsApp Order Builder Card -->
+          <div class="whatsapp-builder-card">
+            <span class="tbc-eyebrow">QUICK WHATSAPP ORDER</span>
+            <h3 style="font-size: 24px; margin-bottom: 8px;">Build Your Instant WhatsApp Message</h3>
+            <p style="font-size: 14px; color: var(--color-text-muted); margin-bottom: 20px;">
+              Select your preferred product category and specify your requirements — click below to open your customized order directly in WhatsApp.
+            </p>
+
+            <form id="whatsappOrderForm" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="waCategory">Select Product Category *</label>
+                <select id="waCategory" class="field-input" required>
+                  <option value="1. Herbal Products">1. Herbal Products (Botanical Ingredients &amp; Formulations)</option>
+                  <option value="2. Skincare Products">2. Skincare Products (Skin Nourishment &amp; Grooming)</option>
+                  <option value="3. Wellness Products">3. Wellness Products (Healthy Lifestyle &amp; Vitality)</option>
+                  <option value="All Product Categories & Price List">All Product Categories &amp; Complete Price List</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="waProductName">Required Product Name *</label>
+                <input type="text" id="waProductName" class="field-input" placeholder="e.g. Herbal Hair Oil / Skincare Cream / Wellness Elixir" required />
+                <span class="field-error-msg" id="waProductError" role="alert">Please enter the required product name.</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="waQuantity">Quantity *</label>
+                <input type="number" id="waQuantity" class="field-input" value="1" min="1" max="500" required />
+                <span class="field-error-msg" id="waQtyError" role="alert">Quantity must be at least 1.</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="waNotes">Additional Details (Pricing / Ingredients / Delivery)</label>
+                <input type="text" id="waNotes" class="field-input" placeholder="Prices, ingredient questions, or delivery notes..." />
+              </div>
+
+              <button type="submit" class="button-arrow button button--primary" style="width: 100%;" id="waSubmitBtn">
+                Order on WhatsApp (0342-7940339)
+                <span class="icon-arrow-circle" aria-hidden="true">→</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18. FREQUENTLY ASKED QUESTIONS (FAQs) SECTION (Exact Tibico .collapsible-content Accordion) -->
+    <section id="faqs" class="faq-section color-option-1" data-aos="fade-up" aria-labelledby="faqHeading">
+      <div class="page-width">
+        <div class="collapsible-content-container">
+          <div class="collapsible-content-header">
+            <span class="collapsible-content-caption">BEFORE YOU ORDER</span>
+            <h2 id="faqHeading" class="collapsible-content-heading">
+              FREQUENTLY ASKED QUESTIONS (FAQs)
+            </h2>
+          </div>
+
+          <div class="accordion-list">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <details open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion__title">1. What is JS Herbal Industry?</h3>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </span>
+                </summary>
+                <div class="accordion__content">
+                  <p>JS Herbal Industry is a premier herbal manufacturing enterprise specializing in the formulation and production of high-quality herbal, skincare, and wellness products. The company harmoniously unites natural botanical ingredients with advanced manufacturing technology.</p>
+                </div>
+              </details>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <details>
+                <summary class="accordion-summary">
+                  <h3 class="accordion__title">2. Where is JS Herbal Industry located?</h3>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </span>
+                </summary>
+                <div class="accordion__content">
+                  <p>JS Herbal Industry's manufacturing plant and corporate facility are situated at Karachi Chowrangi, Karachi, Pakistan.</p>
+                </div>
+              </details>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <details>
+                <summary class="accordion-summary">
+                  <h3 class="accordion__title">3. How can I place an order for JS Herbal Industry products?</h3>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </span>
+                </summary>
+                <div class="accordion__content">
+                  <p>You can connect directly with our customer care desk on WhatsApp at <strong>0342-7940339</strong> to review available products, updated pricing, and seamless order dispatch.</p>
+                </div>
+              </details>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <details>
+                <summary class="accordion-summary">
+                  <h3 class="accordion__title">4. Can I request detailed information about product ingredients?</h3>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </span>
+                </summary>
+                <div class="accordion__content">
+                  <p>Yes, absolutely. You can contact our support team at any time for comprehensive ingredient profiles, active botanicals, formulation details, and recommended usage instructions for any product.</p>
+                </div>
+              </details>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+              <details>
+                <summary class="accordion-summary">
+                  <h3 class="accordion__title">5. What are JS Herbal Industry's business hours?</h3>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </span>
+                </summary>
+                <div class="accordion__content">
+                  <p>Our production plant and customer support desk operate Monday through Saturday, from 9:00 AM to 6:00 PM (PKT).</p>
+                </div>
+              </details>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="accordion-item">
+              <details>
+                <summary class="accordion-summary">
+                  <h3 class="accordion__title">6. How can I get in touch with JS Herbal Industry?</h3>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </span>
+                </summary>
+                <div class="accordion__content">
+                  <p>You can call or message us on WhatsApp at <strong>0342-7940339</strong> or send an email to <a href="mailto:info@arherbal.com">info@arherbal.com</a>.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 19. CONTACT US SECTION (Full Contact Us + Manufacturing Plant Details) -->
+    <section id="contact-us" class="contact-section" data-aos="fade-up" aria-labelledby="contactHeading">
+      <div class="page-width">
+        <div class="contact-grid">
+          <!-- Left Card: Contact Us & Manufacturing Plant Info -->
+          <div class="contact-info-card">
+            <span class="image-with-text-text--subtitle" style="align-self: flex-start;">CONTACT US</span>
+            <h2 id="contactHeading" class="image-with-text-heading" style="font-size: 32px;">
+              Get in Touch with JS Herbal Industry
+            </h2>
+            <p>Would you like more details regarding our botanical formulations? Are you looking for specific product pricing, inventory availability, ingredient profiles, or bulk ordering guidance?</p>
+            <p><strong>The JS Herbal Industry team is readily available to provide dedicated assistance.</strong></p>
+            <p>Feel free to call us, send an email, or message our team directly on WhatsApp for prompt responses.</p>
+
+            <h3 style="font-size: 20px; margin: 16px 0 4px;">Our Manufacturing Plant</h3>
+            <ul class="contact-detail-list">
+              <li class="contact-detail-item">
+                <span class="contact-detail-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                </span>
+                <div>
+                  <strong>Company Name:</strong> JS Herbal Industry<br />
+                  <strong>Address:</strong> Karachi Chowrangi, Karachi, Pakistan
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <span class="contact-detail-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </span>
+                <div>
+                  <strong>Phone / WhatsApp:</strong> <a href="tel:03427940339">0342-7940339</a><br />
+                  <strong>Email:</strong> <a href="mailto:info@arherbal.com">info@arherbal.com</a>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <span class="contact-detail-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </span>
+                <div>
+                  <strong>Working Days:</strong> Monday to Saturday<br />
+                  <strong>Working Hours:</strong> 9:00 AM – 6:00 PM
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Card: Direct Inquiry Form -->
+          <div class="contact-form-card">
+            <span class="tbc-eyebrow" style="align-self: flex-start;">PRODUCT INQUIRY &amp; GUIDANCE</span>
+            <h3 style="font-size: 26px; margin-bottom: 10px;">Send Us a Message</h3>
+            <p style="font-size: 14.5px; color: var(--color-text-muted); margin-bottom: 20px;">
+              Write your query regarding product details, pricing, bulk supply, or ingredient specifications.
+            </p>
+
+            <form id="contactInquiryForm" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="senderName">Your Name *</label>
+                <input type="text" id="senderName" class="field-input" placeholder="Enter your full name" required />
+                <span class="field-error-msg" id="nameError" role="alert">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="senderPhone">Phone / WhatsApp Number *</label>
+                <input type="tel" id="senderPhone" class="field-input" placeholder="03XX-XXXXXXX" required />
+                <span class="field-error-msg" id="phoneError" role="alert">Please enter your phone number.</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="senderEmail">Email Address</label>
+                <input type="email" id="senderEmail" class="field-input" placeholder="you@example.com" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="senderMessage">Your Inquiry / Message *</label>
+                <textarea id="senderMessage" class="field-input" rows="4" style="min-height: 110px; resize: vertical;" placeholder="Specify product name, quantity, or your query..." required></textarea>
+                <span class="field-error-msg" id="msgError" role="alert">Please enter your message.</span>
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: auto;">
+                <button type="submit" class="button button--primary" style="flex: 1;" id="contactWaBtn">
+                  Send via WhatsApp
+                </button>
+                <a href="mailto:info@arherbal.com?subject=Product%20Inquiry%20-%20JS%20Herbal%20Industry" class="button button--secondary" style="flex: 1;">
+                  Send via Email
+                </a>
+              </div>
+              <p id="contactFormStatus" role="status" aria-live="polite" style="margin-top: 12px; font-size: 13.5px; font-weight: 700; display: none;"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 20. FOOTER SECTION (Exact Tibico 4-Column Footer) -->
+  <footer class="footer" data-aos="fade-up" role="contentinfo">
+    <div class="page-width">
+      <div class="footer__blocks-wrapper">
+        <!-- Column 1: Brand Info -->
+        <div class="footer-block">
+          <div class="header__heading" style="margin-bottom: 14px;">
+            <a href="#home" class="header__heading-link">
+              <span class="header__logo-mark" aria-hidden="true">JS</span>
+              <span class="header__logo-text">
+                <span class="header__logo-brand">JS HERBAL INDUSTRY</span>
+                <span class="header__logo-sub">TRUST IN NATURE, PROMISE OF QUALITY!</span>
+              </span>
+            </a>
+          </div>
+          <p><strong>The perfect harmony of natural botanical ingredients, modern manufacturing technology, and quality-driven production.</strong></p>
+          <p>JS Herbal Industry is dedicated to promoting natural wellness through premium herbal, skincare, and vitality products while cultivating lasting trust with our patrons.</p>
+        </div>
+
+        <!-- Column 2: Contact Information -->
+        <div class="footer-block">
+          <h2 class="footer-block__heading">Contact Information</h2>
+          <p>
+            <strong>Address:</strong><br />
+            Karachi Chowrangi, Karachi, Pakistan
+          </p>
+          <p>
+            <strong>Phone / WhatsApp:</strong><br />
+            <a href="tel:03427940339">0342-7940339</a>
+          </p>
+          <p>
+            <strong>Email:</strong><br />
+            <a href="mailto:info@arherbal.com">info@arherbal.com</a>
+          </p>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="footer-block">
+          <h2 class="footer-block__heading">Quick Links</h2>
+          <ul class="footer-menu-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#our-products">Our Products</a></li>
+            <li><a href="#manufacturing">Manufacturing</a></li>
+            <li><a href="#why-choose-us">Why Choose Us</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Business Hours & WhatsApp CTA Card (Exact Tibico .footer-block-image) -->
+        <div class="footer-block">
+          <div class="footer-promo-card">
+            <img src="assets/hero-slide-1.jpg" alt="JS Herbal Industry Karachi Plant &amp; Product Lineup" style="width: 100%; height: 135px; object-fit: cover;" loading="lazy" />
+            <div class="footer-promo-card__body">
+              <h2 class="footer-block__heading" style="margin-bottom: 6px;">Business Hours</h2>
+              <p style="margin-bottom: 8px; font-weight: 700;">Monday – Saturday: 9:00 AM – 6:00 PM</p>
+              <p style="font-size: 13px; margin-bottom: 14px;">JS Herbal Industry – Trust in Nature, Promise of Quality!</p>
+              <a href="https://wa.me/923427940339?text=Hello%20JS%20Herbal%20Industry!" target="_blank" rel="noopener" class="button-arrow button button--secondary" style="padding: 1rem 2rem; font-size: 13.5px; width: 100%;">
+                Order on WhatsApp
+                <span class="icon-arrow-circle" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer__content-bottom">
+        <div class="footer__copyright">
+          <strong>JS Herbal Industry – Trust in Nature, Promise of Quality!</strong> &nbsp;|&nbsp; © 2026 JS Herbal Industry. All Rights Reserved.
+        </div>
+        <div style="display: flex; gap: 16px; font-size: 12px; font-weight: 600;">
+          <a href="#home" style="color: var(--color-text-primary);">Home</a>
+          <a href="#about-us" style="color: var(--color-text-primary);">About Us</a>
+          <a href="#our-products" style="color: var(--color-text-primary);">Our Products</a>
+          <a href="#manufacturing" style="color: var(--color-text-primary);">Manufacturing</a>
+          <a href="#contact-us" style="color: var(--color-text-primary);">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 21. FLOATING BUTTONS & BACK-TO-TOP (Exact Tibico .floating-buttons & .back-to-top) -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/923427940339?text=Hello%20JS%20Herbal%20Industry!%20I%20would%20like%20to%20order%20products." target="_blank" rel="noopener" class="club-button club-button--whatsapp" title="Order on WhatsApp: 0342-7940339">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      <span>Order on WhatsApp</span>
+    </a>
+    <a href="#contact-us" class="club-button" title="Contact JS Herbal Industry">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span>0342-7940339</span>
+    </a>
+  </div>
+
+  <button type="button" id="ButtonBackToTop" class="back-to-top" aria-label="Scroll to the top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- 22. INTERACTIVE CART / WHATSAPP INQUIRY DRAWER (Exact Tibico .cart-drawer) -->
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <aside class="cart-drawer-panel" id="cartDrawer" role="dialog" aria-modal="true" aria-label="WhatsApp Order Inquiry List" tabindex="-1">
+    <div class="drawer-header">
+      <h2 style="margin: 0; font-size: 22px;">WhatsApp Order List</h2>
+      <button type="button" class="header__icon-btn" id="closeCartBtn" aria-label="Close drawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <div style="background: var(--color-surface-lime); padding: 12px 16px; border-radius: var(--radius-panel); margin-bottom: 18px; font-size: 13.5px; font-weight: 700;">
+        Select your preferred product quantities and send your order directly to WhatsApp (0342-7940339)!
+      </div>
+      <div id="drawerItemsList" style="display: flex; flex-direction: column; gap: 12px;"></div>
+    </div>
+    <div class="drawer-footer">
+      <div style="background: var(--color-surface-lavender); padding: 12px 14px; border-radius: var(--radius-panel); margin-bottom: 14px; font-size: 13px;">
+        <strong>Direct Customer Support:</strong> 0342-7940339<br />
+        <span>Working Hours: Mon – Sat, 9:00 AM – 6:00 PM</span>
+      </div>
+      <button type="button" class="button button--primary" style="width: 100%;" id="checkoutWhatsAppBtn">
+        Order on WhatsApp (0342-7940339)
+      </button>
+    </div>
+  </aside>
+
+  <!-- 23. SEARCH MODAL DRAWER -->
+  <aside class="cart-drawer-panel" id="searchDrawer" role="dialog" aria-modal="true" aria-label="Search JS Herbal Industry" tabindex="-1">
+    <div class="drawer-header">
+      <h2 style="margin: 0; font-size: 22px;">Search Storefront</h2>
+      <button type="button" class="header__icon-btn" id="closeSearchBtn" aria-label="Close search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <div class="form-group">
+        <label class="form-label" for="siteSearchInput">Search products, manufacturing details, or FAQs</label>
+        <input type="search" id="siteSearchInput" class="field-input" placeholder="Herbal, Skincare, Wellness, Karachi, WhatsApp..." />
+      </div>
+      <div id="searchResultsList" style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px;"></div>
+    </div>
+  </aside>
+
+  <!-- 24. MOBILE NAVIGATION DRAWER -->
+  <aside class="cart-drawer-panel" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu" tabindex="-1">
+    <div class="drawer-header">
+      <h2 style="margin: 0; font-size: 22px;">JS Herbal Industry</h2>
+      <button type="button" class="header__icon-btn" id="closeMobileMenuBtn" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <nav aria-label="Mobile Navigation">
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+          <li><a href="#home" class="js-mobile-nav-link" style="display:block;padding:12px 16px;background:var(--color-surface-raised);border-radius:var(--radius-panel);font-weight:700;text-decoration:none;color:var(--color-text-primary);">Home</a></li>
+          <li><a href="#about-us" class="js-mobile-nav-link" style="display:block;padding:12px 16px;background:var(--color-surface-raised);border-radius:var(--radius-panel);font-weight:700;text-decoration:none;color:var(--color-text-primary);">About Us</a></li>
+          <li><a href="#our-products" class="js-mobile-nav-link" style="display:block;padding:12px 16px;background:var(--color-surface-lime);border-radius:var(--radius-panel);font-weight:800;text-decoration:none;color:var(--color-text-primary);">Our Products</a></li>
+          <li><a href="#mission-vision" class="js-mobile-nav-link" style="display:block;padding:12px 16px;background:var(--color-surface-raised);border-radius:var(--radius-panel);font-weight:700;text-decoration:none;color:var(--color-text-primary);">Mission &amp; Vision</a></li>
+          <li><a href="#manufacturing" class="js-mobile-nav-link" style="display:block;padding:12px 16px;background:var(--color-surface-raised);border-radius:var(--radius-panel);font-weight:700;text-decoration:none;color:var(--color-text-primary);">Manufacturing Plant</a></li>
+          <li><a href="#why-choose-us" class="js-mobile-nav-link" style="display:block;padding:12px 16px;background:var(--color-surface-raised);border-radius:var(--radius-panel);font-weight:700;text-decoration:none;color:var(--color-text-primary);">Why Choose Us</a></li>
+          <li><a href="#faqs" class="js-mobile-nav-link" style="display:block;padding:12px 16px;background:var(--color-surface-raised);border-radius:var(--radius-panel);font-weight:700;text-decoration:none;color:var(--color-text-primary);">FAQs</a></li>
+          <li><a href="#contact-us" class="js-mobile-nav-link" style="display:block;padding:12px 16px;background:var(--color-surface-raised);border-radius:var(--radius-panel);font-weight:700;text-decoration:none;color:var(--color-text-primary);">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="drawer-footer">
+      <a href="https://wa.me/923427940339" target="_blank" rel="noopener" class="button button--primary" style="width: 100%;">
+        WhatsApp: 0342-7940339
+      </a>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
